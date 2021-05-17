@@ -17863,9 +17863,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8a58a7cd1d92c4ea0b02bd7d9a6cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 10
+  lives: 100
   anim: {fileID: 696078571}
-  titan: {fileID: 696078576}
+  _tfTitan: {fileID: 696078576}
+  _rbTitan: {fileID: 696078574}
+  _fxTeleporte: {fileID: 8595810630992535929, guid: 72a1b78d94dc20940989cb8c262826d8,
+    type: 3}
+  _minionsTitan: {fileID: 8454067141957986491, guid: fca940bd65defa949a5a914f76cbe0ed,
+    type: 3}
 --- !u!4 &696078576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400082, guid: 24c4300f68c986241af51004b72b03f2,
