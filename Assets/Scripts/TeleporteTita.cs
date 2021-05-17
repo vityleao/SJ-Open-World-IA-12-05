@@ -20,7 +20,7 @@ public class TeleporteTita : MonoBehaviour
     public GameObject ParticleSystemTeleporte;
     public GameObject Titan;
     float espera = 5f;
-        void Teleporte()
+    void Teleporte()
     {
         Instantiate(ParticleSystemTeleporte, transform.position, transform.rotation);
         ParticleSystemTeleporte.transform.parent = Titan.transform;
