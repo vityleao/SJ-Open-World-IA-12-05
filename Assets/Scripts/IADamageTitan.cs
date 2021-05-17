@@ -7,6 +7,7 @@ public class IADamageTitan : MonoBehaviour
     private float _tempoInvocacao = 2f;
     private float _tempoIntervalo = 0f;
     private float _tempoUltima = 0f;
+    private bool _portalOn = false;
     [SerializeField] Animator anim;
     // [SerializeField] GameObject item;
     [SerializeField] Transform _tfTitan;
@@ -19,13 +20,36 @@ public class IADamageTitan : MonoBehaviour
     }
     void Update()
     {
-        if (lives <= 95 && lives > 50)
+        if (lives < 95 && lives > 80)
         {
+            if (!_portalOn)
+            {
+                GameObject portal = Instantiate(_fxTeleporte, _tfTitan.position + Vector3.forward + Vector3.up * 2,
+                    Quaternion.identity);
+                _portalOn = true;
+            }
             _rbTitan.constraints = RigidbodyConstraints.FreezePosition;
             _tempoIntervalo = Time.time - _tempoUltima;
             if (_tempoIntervalo >= _tempoInvocacao)
             {
                 Instantiate(_minionsTitan, _tfTitan.position + Vector3.forward * 2 + Vector3.up * 2, Quaternion.identity);
+                _tempoUltima = Time.time;
+            }
+        }
+
+        if (lives < 80)
+        {
+            if (_tempoIntervalo >= _tempoInvocacao)
+            {
+                if (_tempoIntervalo >= _tempoInvocacao)
+                {
+                    float dist = Vector3.Distance(_tfTitan.position,
+                        GameObject.FindGameObjectWithTag("Player").transform.position);
+                    if (dist < 5f && dist > 1f)
+                    {
+                        _tfTitan.position = new Vector3(Random.Range(-4.5f, 4.5f), 100f, Random.Range(350f, 450f));
+                    }
+                }
                 _tempoUltima = Time.time;
             }
         }
