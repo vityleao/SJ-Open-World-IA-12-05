@@ -7,6 +7,12 @@ public class IADamageTitan : MonoBehaviour
     private float _tempoInvocacao = 2f;
     private float _tempoIntervalo = 0f;
     private float _tempoUltima = 0f;
+    private float _tempoAtaqueSeq1 = 2f;
+    private float _tempoIntervaloSeq1 = 0f;
+    private float _tempoUltimaSeq1 = 0f;
+    private float _tempoAtaqueSeq2 = 2f;
+    private float _tempoIntervaloSeq2 = 0f;
+    private float _tempoUltimaSeq2 = 0f;
     private bool _portalOn = false;
     [SerializeField] Animator anim;
     // [SerializeField] GameObject item;
@@ -14,9 +20,15 @@ public class IADamageTitan : MonoBehaviour
     [SerializeField] Rigidbody _rbTitan;
     [SerializeField] GameObject _fxTeleporte;
     [SerializeField] private GameObject _minionsTitan;
+    public GameObject projetil;
+    public float timer = 1.0f;
+    public float timer2 = 1f;
+    public float velocidade = 0.007f;
     void Start()
     {
         anim.SetBool("Die", false);
+        anim.SetBool("Ataque2",false);
+        anim.SetBool("Ataque1",false);
     }
     void Update()
     {
@@ -37,7 +49,7 @@ public class IADamageTitan : MonoBehaviour
             }
         }
 
-        if (lives < 80)
+        if (lives < 80 && lives > 65)
         {
             if (_tempoIntervalo >= _tempoInvocacao)
             {
@@ -53,6 +65,92 @@ public class IADamageTitan : MonoBehaviour
                 _tempoUltima = Time.time;
             }
         }
+
+        if (lives < 65 && lives > 50)
+        {
+            _tempoIntervaloSeq1 = Time.time - _tempoUltimaSeq1;
+            if(_tempoIntervaloSeq1>=_tempoAtaqueSeq1)
+            {
+                if(_tempoIntervaloSeq1>=_tempoAtaqueSeq1)
+                {
+                    anim.SetBool("Attack",false);
+                    anim.SetBool("Ataque1",true);
+                }
+                _tempoUltimaSeq1 = Time.time;
+            }
+
+        }
+
+         if (lives < 50 && lives > 45)
+        {
+            _tempoIntervaloSeq2 = Time.time - _tempoUltimaSeq2;
+            if(_tempoIntervaloSeq2>=_tempoAtaqueSeq2)
+            {
+                if(_tempoIntervaloSeq2>=_tempoAtaqueSeq2)
+                {
+                    anim.SetBool("Attack",false);
+                    anim.SetBool("Ataque2", true);
+                }
+                _tempoUltimaSeq2 = Time.time;
+            }
+
+        }
+
+        if (lives < 45 && lives > 30)
+        {
+            if (Time.timeScale == 1)
+        {
+            timer -= Time.deltaTime;
+
+            //transform.Translate(Vector3.forward * velocidade);
+
+
+
+            if (timer <= 0.0f)
+            {
+                GameObject currentball = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball1 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball1.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball2 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball2.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball3 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball3.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball4 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball4.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball5 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball5.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball6 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball6.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+                GameObject currentball7 = Instantiate(projetil, transform.position + transform.forward, projetil.transform.rotation);
+                currentball7.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+                transform.Rotate(0, 45, 0);
+
+
+
+
+
+
+                timer = 1.0f;
+
+            }
+        }
+        }
+
         if (lives <= 0)
         {
             //Destroy(gameObject);

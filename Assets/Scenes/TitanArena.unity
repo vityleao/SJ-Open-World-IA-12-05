@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 1
+    agentRadius: 0.9
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 34.6
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.33333334
+    cellSize: 0.29999998
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -281,13 +281,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793872402}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 48.9, y: 32.4, z: 76.8}
+  m_LocalRotation: {x: 0.6882767, y: -0.13079825, z: 0.16603436, w: 0.6939738}
+  m_LocalPosition: {x: 34.5, y: 43.7, z: 94.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 87.108, y: 68.69601, z: 92.936005}
 --- !u!1001 &824968662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -404,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Titan 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9094145515030418733, guid: d6ef6df056efec449bbb65ed406e07a4,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 528343935}
     - target: {fileID: 9094145515030810621, guid: d6ef6df056efec449bbb65ed406e07a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -412,12 +417,12 @@ PrefabInstance:
     - target: {fileID: 9094145515030810621, guid: d6ef6df056efec449bbb65ed406e07a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 9094145515030810621, guid: d6ef6df056efec449bbb65ed406e07a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 118.3
+      value: 107.8
       objectReference: {fileID: 0}
     - target: {fileID: 9094145515030810621, guid: d6ef6df056efec449bbb65ed406e07a4,
         type: 3}
