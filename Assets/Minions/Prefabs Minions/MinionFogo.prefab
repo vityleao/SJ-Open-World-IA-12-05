@@ -124,7 +124,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438170804561927494}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 63ee48bd82e241143baf66c54ca98a2f, type: 3}
   m_Controller: {fileID: 9100000, guid: d8bcd64dedb6e9841a13898563153d39, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1626587, y: 2.0939293, z: 2.115509}
-  m_Center: {x: 0.001159668, y: 0.37827492, z: -0.025527954}
+  m_Size: {x: 1.7560425, y: 1.6228256, z: 2.115509}
+  m_Center: {x: -0.058685303, y: 0.33916855, z: -0.025527954}
 --- !u!195 &961018797870548185
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8438170804561927494}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -165,8 +165,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 2
+  m_BaseOffset: 1.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &215624072816537810
@@ -181,17 +181,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6a261bd384ae24bb5090b73a8c1b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6543529318134973176, guid: d838102713a917545be0622457be70e6, type: 3}
+  agent: {fileID: 961018797870548185}
   target: {fileID: 0}
   patrolposition: {x: 0, y: 0, z: 0}
   stoppedTime: 0
   patrolDistance: 10
   timetowait: 3
   distancetotrigger: 20
-  distancetoattack: 2
+  distancetoattack: 4
   SuperAttack: 0
-  Fantasmafogo: {fileID: 6543529318134973156, guid: d838102713a917545be0622457be70e6,
-    type: 3}
+  Fantasmafogo: {fileID: 4141708273440680299}
   Explosion: {fileID: 1451592278842746329, guid: 53cbff6136a051c4584e62fe4de3394f,
     type: 3}
   currentState: 0
@@ -208,6 +207,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  Drop: {fileID: 0}
-  SlimeFogo: {fileID: 6543529318134973156, guid: d838102713a917545be0622457be70e6,
-    type: 3}
+  Drop: {fileID: 7592574638779259776, guid: aaf6aea22eab666428945d599e393a3c, type: 3}
+  SlimeFogo: {fileID: 4141708273440680299}

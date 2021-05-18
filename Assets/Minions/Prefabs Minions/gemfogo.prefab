@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7067817718923362618}
   - component: {fileID: 6177308465190178463}
   - component: {fileID: 8241237776834263637}
+  - component: {fileID: 4262616784888481729}
+  - component: {fileID: -563931675887414288}
   m_Layer: 0
   m_Name: gemfogo
   m_TagString: Untagged
@@ -79,3 +81,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4262616784888481729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592574638779259776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c47fd8cc4ad1ac42a56fe99e7e496e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-563931675887414288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592574638779259776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018477593, y: 0.018477585, z: 0.011499998}
+  m_Center: {x: -0.0000000041909516, y: -1.3632748e-17, z: -0.0019186384}
