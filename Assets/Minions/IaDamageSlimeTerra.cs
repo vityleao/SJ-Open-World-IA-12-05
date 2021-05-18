@@ -7,6 +7,8 @@ public class IaDamageSlimeTerra : MonoBehaviour
     public int lives = 10;
     //public Animator anim;
     public GameObject Drop;
+    public Transform FantasmaTerra;
+
     void Start()
     {
         //anim.SetBool("Die", false);
@@ -25,6 +27,7 @@ public class IaDamageSlimeTerra : MonoBehaviour
         {
             Destroy(gameObject);
             //anim.SetBool("Die", true);
+            Instantiate(Drop, FantasmaTerra.position + Vector3.up * 2, Quaternion.identity);
         }
         
     }

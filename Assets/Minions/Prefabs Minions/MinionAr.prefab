@@ -159,17 +159,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf65d38a0f8c8634fb2eb25e9629065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6073986254467430016, guid: 625702f7c91b752469fefe1140fe3959, type: 3}
+  agent: {fileID: 4803571025372123116}
   target: {fileID: 0}
   patrolposition: {x: 0, y: 0, z: 0}
   stoppedTime: 0
   patrolDistance: 10
   timetowait: 3
   distancetotrigger: 20
-  distancetoattack: 2
+  distancetoattack: 4
   SuperAttack: 0
-  FantasmaAr: {fileID: 6073986254467430043, guid: 625702f7c91b752469fefe1140fe3959,
-    type: 3}
+  FantasmaAr: {fileID: 8173668172573550248}
   Explosion: {fileID: 6007706075839594082, guid: 1bf9a8faa43b40649ab0db70c8d8e399,
     type: 3}
   currentState: 0
@@ -182,7 +181,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8173668172573550254}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -191,8 +190,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 2
+  m_BaseOffset: 1.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &8232162463161066400
@@ -209,4 +208,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   Drop: {fileID: 1635337002189055601, guid: e09a8bb20013fea43a859c9817a2c7c8, type: 3}
-  SlimeAr: {fileID: 6073986254467430043, guid: 625702f7c91b752469fefe1140fe3959, type: 3}
+  SlimeAr: {fileID: 8173668172573550248}

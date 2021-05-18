@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3701475705498704527}
   - component: {fileID: 2153413083396009503}
   - component: {fileID: 5554128633194613022}
+  - component: {fileID: 3467154426859239100}
+  - component: {fileID: 6038042249773478012}
   m_Layer: 0
   m_Name: Smooth Diamond
   m_TagString: Untagged
@@ -79,3 +81,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3467154426859239100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267926901224262466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c47fd8cc4ad1ac42a56fe99e7e496e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6038042249773478012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267926901224262466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999932, y: 0.019999929, z: 0.012198779}
+  m_Center: {x: 0, y: 0, z: -0.0025193898}
