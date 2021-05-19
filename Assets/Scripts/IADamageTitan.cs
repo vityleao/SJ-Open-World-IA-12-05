@@ -8,17 +8,13 @@ public class IADamageTitan : MonoBehaviour
     private float _tempoTeleporte = 1f;
     private float _tempoIntervalo = 0f;
     private float _tempoUltima = 0f;
-<<<<<<< Updated upstream
     private float _tempoAtaqueSeq1 = 2f;
     private float _tempoIntervaloSeq1 = 0f;
     private float _tempoUltimaSeq1 = 0f;
     private float _tempoAtaqueSeq2 = 2f;
     private float _tempoIntervaloSeq2 = 0f;
     private float _tempoUltimaSeq2 = 0f;
-    private bool _portalOn = false;
-=======
     private bool _portalOn = true;
->>>>>>> Stashed changes
     [SerializeField] Animator anim;
     // [SerializeField] GameObject item;
     [SerializeField] Transform _tfTitan;
@@ -58,11 +54,7 @@ public class IADamageTitan : MonoBehaviour
             }
         }
 
-<<<<<<< Updated upstream
         if (lives < 80 && lives > 65)
-=======
-        if (lives < 90)
->>>>>>> Stashed changes
         {
             _tempoIntervalo = Time.time - _tempoUltima;
             if (_tempoIntervalo >= _tempoTeleporte)
