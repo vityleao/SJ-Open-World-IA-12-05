@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class IADamageTitan : MonoBehaviour
 {
-    public int lives = 100;
+    public int lives = 50;
     private float _tempoInvocacao = 2f;
-    private float _tempoTeleporte = 1f;
+    private float _tempoTeleporte = 3f;
     private float _tempoIntervalo = 0f;
     private float _tempoUltima = 0f;
     private float _tempoAtaqueSeq1 = 2f;
@@ -33,7 +33,7 @@ public class IADamageTitan : MonoBehaviour
     }
     void Update()
     {
-        if (lives < 95 && lives >= 90)
+        if (lives < 50 && lives >= 40)
         {
             if (_portalOn)
             {
@@ -54,12 +54,12 @@ public class IADamageTitan : MonoBehaviour
             }
         }
 
-        if (lives < 80 && lives > 65)
+        if (lives < 40 && lives > 30)
         {
             _tempoIntervalo = Time.time - _tempoUltima;
             if (_tempoIntervalo >= _tempoTeleporte)
             {
-                _tfTitan.position = new Vector3(Random.Range(450f, 550f), 100f, Random.Range(350f, 450f));
+                _tfTitan.position = new Vector3(Random.Range(15f, 55f), 2f, Random.Range(85f, 115f));
                 //float dist = Vector3.Distance(_tfTitan.position,
                 //    GameObject.FindGameObjectWithTag("Player").transform.position);
                 //if (dist < 5f && dist > 1f)
@@ -70,7 +70,7 @@ public class IADamageTitan : MonoBehaviour
             }
         }
 
-        if (lives < 65 && lives > 50)
+        if (lives < 30 && lives > 20)
         {
             _tempoIntervaloSeq1 = Time.time - _tempoUltimaSeq1;
             if(_tempoIntervaloSeq1>=_tempoAtaqueSeq1)
@@ -85,7 +85,7 @@ public class IADamageTitan : MonoBehaviour
 
         }
 
-         if (lives < 50 && lives > 45)
+         if (lives < 20 && lives > 10)
         {
             _tempoIntervaloSeq2 = Time.time - _tempoUltimaSeq2;
             if(_tempoIntervaloSeq2>=_tempoAtaqueSeq2)
@@ -100,7 +100,7 @@ public class IADamageTitan : MonoBehaviour
 
         }
 
-        if (lives < 45 && lives > 30)
+        if (lives < 10)
         {
             if (Time.timeScale == 1)
         {

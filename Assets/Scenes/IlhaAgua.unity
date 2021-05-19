@@ -59354,6 +59354,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Titan
       objectReference: {fileID: 0}
+    - target: {fileID: 9094145515030418728, guid: d6ef6df056efec449bbb65ed406e07a4,
+        type: 3}
+      propertyPath: _minionsTitan
+      value: 
+      objectReference: {fileID: 2346591087613203534, guid: 4e4c7eef0e45d394b88d7cd34ac1f8de,
+        type: 3}
     - target: {fileID: 9094145515030418733, guid: d6ef6df056efec449bbb65ed406e07a4,
         type: 3}
       propertyPath: target
