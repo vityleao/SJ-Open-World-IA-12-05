@@ -5,8 +5,10 @@ public class IADamageTitan : MonoBehaviour
 {
     public int lives = 100;
     private float _tempoInvocacao = 2f;
+    private float _tempoTeleporte = 1f;
     private float _tempoIntervalo = 0f;
     private float _tempoUltima = 0f;
+<<<<<<< Updated upstream
     private float _tempoAtaqueSeq1 = 2f;
     private float _tempoIntervaloSeq1 = 0f;
     private float _tempoUltimaSeq1 = 0f;
@@ -14,6 +16,9 @@ public class IADamageTitan : MonoBehaviour
     private float _tempoIntervaloSeq2 = 0f;
     private float _tempoUltimaSeq2 = 0f;
     private bool _portalOn = false;
+=======
+    private bool _portalOn = true;
+>>>>>>> Stashed changes
     [SerializeField] Animator anim;
     // [SerializeField] GameObject item;
     [SerializeField] Transform _tfTitan;
@@ -32,13 +37,12 @@ public class IADamageTitan : MonoBehaviour
     }
     void Update()
     {
-        if (lives < 95 && lives > 80)
+        if (lives < 95 && lives >= 90)
         {
-            if (!_portalOn)
+            if (_portalOn)
             {
-                GameObject portal = Instantiate(_fxTeleporte, _tfTitan.position + Vector3.forward + Vector3.up * 2,
-                    Quaternion.identity);
-                _portalOn = true;
+                Instantiate(_fxTeleporte, _tfTitan.position + Vector3.forward + Vector3.up * 2, Quaternion.identity);
+                _portalOn = false;
             }
             _rbTitan.constraints = RigidbodyConstraints.FreezePosition;
             _tempoIntervalo = Time.time - _tempoUltima;
@@ -47,21 +51,29 @@ public class IADamageTitan : MonoBehaviour
                 Instantiate(_minionsTitan, _tfTitan.position + Vector3.forward * 2 + Vector3.up * 2, Quaternion.identity);
                 _tempoUltima = Time.time;
             }
+
+            if (lives == 90)
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Portal"));
+            }
         }
 
+<<<<<<< Updated upstream
         if (lives < 80 && lives > 65)
+=======
+        if (lives < 90)
+>>>>>>> Stashed changes
         {
-            if (_tempoIntervalo >= _tempoInvocacao)
+            _tempoIntervalo = Time.time - _tempoUltima;
+            if (_tempoIntervalo >= _tempoTeleporte)
             {
-                if (_tempoIntervalo >= _tempoInvocacao)
-                {
-                    float dist = Vector3.Distance(_tfTitan.position,
-                        GameObject.FindGameObjectWithTag("Player").transform.position);
-                    if (dist < 5f && dist > 1f)
-                    {
-                        _tfTitan.position = new Vector3(Random.Range(-4.5f, 4.5f), 100f, Random.Range(350f, 450f));
-                    }
-                }
+                _tfTitan.position = new Vector3(Random.Range(450f, 550f), 100f, Random.Range(350f, 450f));
+                //float dist = Vector3.Distance(_tfTitan.position,
+                //    GameObject.FindGameObjectWithTag("Player").transform.position);
+                //if (dist < 5f && dist > 1f)
+                //{
+                //    _tfTitan.position = new Vector3(Random.Range(-4.5f, 4.5f), 100f, Random.Range(350f, 450f));
+                //}
                 _tempoUltima = Time.time;
             }
         }
@@ -163,7 +175,7 @@ public class IADamageTitan : MonoBehaviour
     public IEnumerator PlayOneShot()
     {
         anim.SetBool("Die", true);
-        yield return .5f;
+        yield return new WaitForSeconds (.5f);
         anim.SetBool("Die", false);
     }
     */
